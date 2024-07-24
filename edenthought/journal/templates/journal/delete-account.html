@@ -1,0 +1,23 @@
+{% extends 'journal/navbar.html' %}
+
+{% block content  %}
+<br>
+<div class='container bg-white shadow-md p-5 form-layout'>
+    <br>
+    <h3> Delete your account  </h3>
+    <p> Are you sure? </p>
+
+    <form method='POST' autocomplete="off">
+
+        {% csrf_token %}
+
+        <br>
+        <button class='btn btn-secondary btn-md w-100 btn-block p-3' type='submit'> Delete account </button>
+
+    </form>
+
+    <a href="{% url 'profile-management' %}"> Return to porfile management</a>  
+</div>
+
+
+{% endblock %}
